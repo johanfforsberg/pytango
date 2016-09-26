@@ -628,6 +628,15 @@ class Device(LatestDeviceImpl):
         pass
     delete_device.__doc__ == LatestDeviceImpl.delete_device.__doc__
 
+    def read_attr_hardware(self, attr_list):
+        return LatestDeviceImpl.read_attr_hardware(self, attr_list)
+
+    def dev_state(self):
+        return LatestDeviceImpl.dev_state(self)
+
+    def dev_status(self):
+        return LatestDeviceImpl.dev_status(self)
+
     def get_device_properties(self, ds_class = None):
         if ds_class is None:
             try:
